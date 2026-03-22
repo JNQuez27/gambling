@@ -46,9 +46,30 @@ A full mobile-first reflection & behavior-awareness app built on the Next.js sta
 | `--color-accent` | #e8b86d | Dusky yellow — positive feedback |
 | `--color-text` | #2d3748 | Dark gray text (not pure black) |
 
+## React Native (Expo) Project
+
+A full React Native port lives in `reflect-rn/` — a separate Expo + Expo Router project.
+
+| File/Directory | Purpose | Status |
+|----------------|---------|--------|
+| `reflect-rn/app/_layout.tsx` | Root Stack layout | ✅ Ready |
+| `reflect-rn/app/index.tsx` | Redirects to /splash | ✅ Ready |
+| `reflect-rn/app/splash.tsx` | 3-slide onboarding | ✅ Ready |
+| `reflect-rn/app/login.tsx` | Login + Sign-Up | ✅ Ready |
+| `reflect-rn/app/(tabs)/_layout.tsx` | Bottom tab navigator | ✅ Ready |
+| `reflect-rn/app/(tabs)/home.tsx` | Home dashboard | ✅ Ready |
+| `reflect-rn/app/(tabs)/diary.tsx` | Diary entries | ✅ Ready |
+| `reflect-rn/app/(tabs)/learn.tsx` | Articles + practices | ✅ Ready |
+| `reflect-rn/app/(tabs)/profile.tsx` | User profile + stats | ✅ Ready |
+| `reflect-rn/app/settings.tsx` | App settings | ✅ Ready |
+| `reflect-rn/constants/colors.ts` | Design token palette | ✅ Ready |
+
+Tech: Expo ~53, Expo Router ~4, react-native 0.76, react-native-svg, expo-linear-gradient, TypeScript (zero errors).
+
 ## Session History
 
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
 | Mar 22 2026 | Full Reflect app built — splash, login, home, profile, settings, diary, learn screens |
+| Mar 22 2026 | React Native migration — full Expo + Expo Router project created in `reflect-rn/` |
