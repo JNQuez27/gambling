@@ -1,87 +1,54 @@
-# Active Context: Next.js Starter Template
+# Active Context: Reflect — Behavior Awareness App
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**App Status**: ✅ All screens built and passing typecheck + lint
 
-The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
+A full mobile-first reflection & behavior-awareness app built on the Next.js starter template. The UI is calm, minimalist, and emotionally intelligent with a soft blue/green/off-white palette.
 
 ## Recently Completed
 
-- [x] Base Next.js 16 setup with App Router
-- [x] TypeScript configuration with strict mode
-- [x] Tailwind CSS 4 integration
-- [x] ESLint configuration
-- [x] Memory bank documentation
-- [x] Recipe system for common features
+- [x] Global CSS variables for the full design palette (soft blue, muted green, peach accent, dark gray text)
+- [x] Updated root layout with app title "Reflect — Behavior Awareness App"
+- [x] Root page redirects to `/splash`
+- [x] Splash screen (3 animated slides: Awareness, Reflection, Better Choices) with SVG illustrations
+- [x] Login/Sign-Up screen with OAuth (Google, Apple) + email/password toggle
+- [x] Home dashboard with greeting, Reality Check insight card, weekly streak tracker (circular indicators), streak CTA button, reflection prompt, quick actions, recent insights
+- [x] Profile screen with avatar, stat cards, weekly activity bar chart, achievements grid
+- [x] Settings screen with account management, notification toggles, privacy toggles, general options, logout/delete
+- [x] Diary screen with mood selector (emoji), compose panel, past entries list with tags
+- [x] Learn screen with category filters, quick practices, featured articles
+- [x] Bottom navigation component (Home, Diary, Learn, Profile) with active state highlighting
+- [x] All lint errors resolved (moved inner components to module scope, fixed Math.random in useState initializer)
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page | ✅ Ready |
-| `src/app/layout.tsx` | Root layout | ✅ Ready |
-| `src/app/globals.css` | Global styles | ✅ Ready |
-| `.kilocode/` | AI context & recipes | ✅ Ready |
+| `src/app/page.tsx` | Redirects to /splash | ✅ Ready |
+| `src/app/splash/page.tsx` | 3-slide onboarding | ✅ Ready |
+| `src/app/login/page.tsx` | Login + Sign-Up | ✅ Ready |
+| `src/app/home/page.tsx` | Main dashboard | ✅ Ready |
+| `src/app/diary/page.tsx` | Diary entries | ✅ Ready |
+| `src/app/learn/page.tsx` | Articles + practices | ✅ Ready |
+| `src/app/profile/page.tsx` | User profile + stats | ✅ Ready |
+| `src/app/settings/page.tsx` | App settings | ✅ Ready |
+| `src/components/ui/BottomNav.tsx` | Bottom navigation bar | ✅ Ready |
+| `src/app/globals.css` | CSS variables + global styles | ✅ Ready |
 
-## Current Focus
+## Design System
 
-The template is ready. Next steps depend on user requirements:
-
-1. What type of application to build
-2. What features are needed
-3. Design/branding preferences
-
-## Quick Start Guide
-
-### To add a new page:
-
-Create a file at `src/app/[route]/page.tsx`:
-```tsx
-export default function NewPage() {
-  return <div>New page content</div>;
-}
-```
-
-### To add components:
-
-Create `src/components/` directory and add components:
-```tsx
-// src/components/ui/Button.tsx
-export function Button({ children }: { children: React.ReactNode }) {
-  return <button className="px-4 py-2 bg-blue-600 text-white rounded">{children}</button>;
-}
-```
-
-### To add a database:
-
-Follow `.kilocode/recipes/add-database.md`
-
-### To add API routes:
-
-Create `src/app/api/[route]/route.ts`:
-```tsx
-import { NextResponse } from "next/server";
-
-export async function GET() {
-  return NextResponse.json({ message: "Hello" });
-}
-```
-
-## Available Recipes
-
-| Recipe | File | Use Case |
-|--------|------|----------|
-| Add Database | `.kilocode/recipes/add-database.md` | Data persistence with Drizzle + SQLite |
-
-## Pending Improvements
-
-- [ ] Add more recipes (auth, email, etc.)
-- [ ] Add example components
-- [ ] Add testing setup recipe
+| Token | Value | Use |
+|-------|-------|-----|
+| `--color-primary` | #5b9bd5 | Soft blue — trust, calm |
+| `--color-secondary` | #7ab89a | Muted green — growth, recovery |
+| `--color-bg` | #f0f4f8 | Light gray-blue background |
+| `--color-accent` | #e8b86d | Dusky yellow — positive feedback |
+| `--color-text` | #2d3748 | Dark gray text (not pure black) |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
+| Mar 22 2026 | Full Reflect app built — splash, login, home, profile, settings, diary, learn screens |
